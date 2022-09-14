@@ -1,0 +1,55 @@
+<ul class="blogPosts">
+    {{#each posts}}
+        <div class="card">
+            <div class="titleTextArea">{{this.title}}</div> {{! get the post title from the posts object}}
+            <div class="postTextArea">{{this.content_txt}}</div> {{!get the post text from the posts object}}
+            <form action="/api/posts" method="post" id="post-form"></form>
+            <form class="postCommentForm">
+                <input type="text" name="commentInput" class="form-input"/><button name="submit">SUBMIT</button>
+            </form>
+            <ul>
+            {{#each this.comments}} {{! send comments for each post in an array attached to each comment}}
+                <li name="postComment">
+                    <div name="userName">{{this.userName}}</div> 
+                    <div name="commentText">{{this.commentText}}</div>
+                </li> 
+            {{/each}}
+            </ul>
+        </div>
+    {{/each}}
+</ul>
+<container>
+    <row class="hero">
+        <col>
+        <row>
+            <div class="blog">
+                <h2>Blog, Comments, Suggestions</h2><br>
+                <p>Feel free to introduce yourselves here! 
+                    This is a good opportunity to tell people what you're hoping to get from this group. 
+                    
+                    Here are a few questions to help everyone get acquainted:
+                    
+                    What kind of music do you write? What platform do you use to produce finished songs?
+                    What instrument do you play? 
+                    What are you hoping to improve on? 
+                    What are your strengths, how can you help others improve?</p><br><br>
+
+                    <label for="bio">Comment Thread</label>
+                        <textarea type="text" name="bio" id="bio" class="form-input" cols="30" rows="10">Post your comments here...</textarea>
+                    <button type="submit">Submit!</button>
+            </div>
+        </row>
+        <row>
+
+            <div class="blog">
+                <h2>This is a sample blog post</h2><br>
+                    <p>I am a student introducing myself!</p> 
+                <button type="submit">Reply!</button>
+            </div>
+        </row>
+        </col>
+    </row>
+</container>
+
+
+

@@ -1,0 +1,59 @@
+<container>
+    <!-- used to check if logged in or not when testing-->
+    <!-- <p style="color: black;">loggedIn: {{loggedIn}}</p> -->
+    <row class="hero">
+        <col>
+            <div class="hero-intro">
+                <h2>Who Are We?</h2><br>
+                <p>
+                    Welcome to Music Weekly! 
+                    The goal here is to complete one song a week, submit it here, and then provide feedback for your fellow musicians!
+                    If one song a week is too strenuous, feel free to submit a song every other week - as long as you're consistent! The song doesn't have to be fully produced or the "standard" 3 - 4 minutes long. As long as you're submitting something by the end of the week, we're happy people! I've posted a separate discussion where everyone can introduce themselves, - feel free to get started there! The first "assignment" is also up.<br>
+
+                    We're all here to practice and have fun. This is a forum for constructive critique, learning, experimenting, and improvement.<br>  
+
+                    Feel free to comment any suggestions or ideas you might have as this is a group for the people! We want everyone to benefit from this as much as possible.<br>
+
+                    I know there's going to be a couple newcomers in the next couple days, so welcome! I'm not sure what the classroom looks like to you as there will be songs that have passed the deadline already - it's not necessary for you to complete them. If you feel inclined to do them, that's up to you! Make sure to leave a comment on someone else's and they'll then know to comment back 🙂 You'll notice you can't see any submissions from any days you haven't completed - once you submit something, you can see everyone else's!<br>
+
+                    A quick note on posting your music:
+                    The only assignment format on this platform that allows people to view each others' work as well as comment on them are questions! Unfortunately, this format doesn't allow you to upload files, only text. A couple ways to use a link instead would be to:<br>
+                    <ul><li>
+                    upload using Google Drive and send a shareable link. There's actually a class google folder in the classwork section! Top right when you click on the tab.</li>
+                    <li>upload to Youtube or soundcloud</li>
+                    <li>upload using WeTransfer</li>
+                    <li>upload a link to anywhere else you might share your music online</li>
+                    </ul>
+                    If you want these to be private uploads, there are settings on YouTube to do that. Anyone has any questions, don't hesitate to reach out to <a href="mailto:heycmaia@gmail.com">Hailey!</a></span>
+                </p>
+            </div>
+        </col>
+        <col>
+        <div class="hero-form">
+        <h3>Start Composing Today!</h3>
+        <p>Fill out this form to register and join the group!</p>
+        <form action="/api/users" method="post" enctype="multipart/form-data" id="register">
+        <label for="username">Username</label>
+            <input type="text" name="Username" id="username" name="name" class="form-input"/>
+        <label for="email">Your Email</label>
+            <input type="email" name="email" id="email" class="form-input"/>
+        <label for="passwprd">Password</label>
+            <input type="password" name="password" id="password1" class="form-input"/>
+        <label for="password">Confirm Password</label>
+            <input type="password" name="password" id="password2" class="form-input"/>
+        <label for="bio">About Me</label>
+            <textarea type="text" name="bio" id="bio" class="form-input" cols="30" rows="10"> tell us about yourself...</textarea>
+            <label for="file">Profile Image</label>
+            <input type="file" name="file" id="file" class="form-input"/>
+        <row>
+            <col>
+                <button type="submit">Start Composing!</button>
+            </col>    
+        </row>
+        </form>
+        <row>
+        <col><p>already a member?</p>
+                <a href="/login">LogIn</a>
+        </col>
+        </row>
+</container>

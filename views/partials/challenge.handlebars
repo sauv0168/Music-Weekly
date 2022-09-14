@@ -1,0 +1,16 @@
+ 
+ <col> 
+ <a href="/post/{{id}}">
+<article class="challenge priya-hero-form">
+  <div class="title">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="meta">
+   {{content_txt}} 
+   by {{user.username}} on {{format_date created_at}}
+    
+    {{comments.length}} {{format_plural "comment" comments.length}}
+  </div>
+</article>
+</a>
+</col>

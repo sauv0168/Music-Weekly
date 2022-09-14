@@ -1,0 +1,23 @@
+{{> post-info post}}
+<div>
+<form class="comment-form priya-hero-form">
+  <div>
+<<<<<<< Updated upstream
+    <textarea name="comment-body" id="comment_body"></textarea>
+=======
+    <textarea required minlength="3" name="comment-body" id="comment_body"></textarea>
+>>>>>>> Stashed changes
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+<div class="comments">
+    {{#each post.comments as |comments|}}
+{{> comments comments}}
+    {{/each}}
+</div>
+</div>
+<script src="/javascript/comment.js"></script>
